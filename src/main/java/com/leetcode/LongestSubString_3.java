@@ -1,5 +1,6 @@
 package com.leetcode;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -66,6 +67,20 @@ public class LongestSubString_3 {
 
     } */
 
+    private static int longestSubString(String s){
+
+        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+        int max = 0;
+        for(int i =0, j =0 ;i < s.length() ;i++){
+            if(map.keySet().contains(s.charAt(i))){
+                j = map.get(s.charAt(i));
+            }
+            map.put(s.charAt(i) , i + 1);
+            max = Math.max(max , i-j+1);
+        }
+        return max;
+    }
+
 
     public static int lengthOfLongestSubstring(String s) {
         int i = 0, j = 0, max = 0;
@@ -85,6 +100,6 @@ public class LongestSubString_3 {
 
     public static void main(String[] args) {
 
-        System.out.println(lengthOfLongestSubstring("pwwke"));
+        System.out.println(longestSubString("abcabcdabcde"));
     }
 }
