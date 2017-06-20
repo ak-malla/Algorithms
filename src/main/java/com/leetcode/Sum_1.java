@@ -39,7 +39,7 @@ public class Sum_1 {
     }
 
     public static void main(String a[]) {
-        int [] arr = {0, 1 , 7, 8};
+        int[] arr = {0, 1, 7, 8};
 
         System.out.println(Arrays.toString(sum(arr, 9)));
 

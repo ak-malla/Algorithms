@@ -20,20 +20,20 @@ public class LongestSubString_3 {
      * Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
      */
 
-    private static String getLongestSubString(String s){
+    private static String getLongestSubString(String s) {
 
         String lSubString = "";
         int length = 0;
 
-        for(int i=0;i < s.length();i++){
+        for (int i = 0; i < s.length(); i++) {
 
             String iSubString = "";
-            for(int j = i+1; j< s.length();j++){
+            for (int j = i + 1; j < s.length(); j++) {
 
 
             }
 
-            if( length < iSubString.length()){
+            if (length < iSubString.length()) {
                 length = iSubString.length();
                 lSubString = iSubString;
             }
@@ -67,16 +67,16 @@ public class LongestSubString_3 {
 
     } */
 
-    private static int longestSubString(String s){
+    private static int longestSubString(String s) {
 
         HashMap<Character, Integer> map = new HashMap<Character, Integer>();
         int max = 0;
-        for(int i =0, j =0 ;i < s.length() ;i++){
-            if(map.keySet().contains(s.charAt(i))){
+        for (int i = 0, j = 0; i < s.length(); i++) {
+            if (map.keySet().contains(s.charAt(i))) {
                 j = map.get(s.charAt(i));
             }
-            map.put(s.charAt(i) , i + 1);
-            max = Math.max(max , i-j+1);
+            map.put(s.charAt(i), i + 1);
+            max = Math.max(max, i - j + 1);
         }
         return max;
     }

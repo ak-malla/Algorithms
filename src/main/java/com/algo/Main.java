@@ -7,7 +7,7 @@ import java.util.Arrays;
  */
 public class Main {
 
-    public static void main(String []args){
+    public static void main(String[] args) {
 
         System.out.println("Welcome AK, Hello World !");
 
@@ -53,22 +53,21 @@ public class Main {
      */
 
     public static class HammingDistance {
-    /**
-     * Hamming Distance is the relative position of bits which differ, between 2 numbers
-     *
-     */
+        /**
+         * Hamming Distance is the relative position of bits which differ, between 2 numbers
+         */
 
-        public static void main(String []a) {
+        public static void main(String[] a) {
 
             System.out.println("Hamming distance between 1 & 4 is : " + hammingDistance(1, 5));
 
         }
 
-        private static int hammingDistance(int x,int y){
+        private static int hammingDistance(int x, int y) {
 
             int xor = x ^ y;
             int count = 0;
-            for(int i=0; i < 32;i++){
+            for (int i = 0; i < 32; i++) {
                 count += (xor >> i) & 1;
             }
             return count;
@@ -82,17 +81,17 @@ public class Main {
     public static class NumberComplment {
         /**
          * Given a number n, get the complement of the number
-         *
+         * <p>
          * i.e., 5 is 0101 complement of 5 is 2 which is 0010
          */
 
-        public static void main(String a[]){
+        public static void main(String a[]) {
 
             System.out.println(~-2);
 
         }
 
-        private static int numberComplement(int n){
+        private static int numberComplement(int n) {
             return 1;
         }
     }
@@ -106,7 +105,7 @@ public class Main {
          * use bit operation to achieve the task
          */
 
-        public static void main(String a[]){
+        public static void main(String a[]) {
             /*
                 Got to achieve the task using XOR ^ and AND &
                 Similar bits will result in 0 for XOR ^
@@ -114,7 +113,7 @@ public class Main {
              */
             int x = 5, y = 5;
 
-            while(y != 0){
+            while (y != 0) {
 
                 int carry = x & y;
 
@@ -123,7 +122,7 @@ public class Main {
                 y = carry << 1;
             }
 
-            System.out.println("Binary Sum of Digits 5 & 5 is :"+x);
+            System.out.println("Binary Sum of Digits 5 & 5 is :" + x);
         }
     }
 }
