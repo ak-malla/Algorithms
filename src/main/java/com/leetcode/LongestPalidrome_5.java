@@ -29,12 +29,12 @@ public class LongestPalidrome_5 {
 
             if (map.containsKey(str.charAt(i)) && checkPalindrome(str , map.get(str.charAt(i)) ,i)) {
                 j = map.get(str.charAt(i));
-                max = Math.max(max, i - j + 1);
-            }
-            map.put(str.charAt(i), i + 1);
+                max = Math.max(max, i - j);
+            } else
+                map.put(str.charAt(i), i );
         }
 
-        return max;
+        return max + 1;
     }
 
     private static boolean checkPalindrome(String str, int l, int r){
@@ -48,8 +48,11 @@ public class LongestPalidrome_5 {
         return true;
     }
 
+    //Improve the code to handle the dynamic programming
+    //https://leetcode.com/problems/longest-palindromic-substring/#/solutions
+
     // main
     public static void main(String a[]) {
-        System.out.println(longestPalidrome("ababcabcdabcde"));
+        System.out.println(longestPalidrome("abaaaaabaaab"));
     }
 }
