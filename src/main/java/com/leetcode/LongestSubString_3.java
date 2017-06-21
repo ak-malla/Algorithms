@@ -20,53 +20,6 @@ public class LongestSubString_3 {
      * Given "pwwkew", the answer is "wke", with the length of 3. Note that the answer must be a substring, "pwke" is a subsequence and not a substring.
      */
 
-    private static String getLongestSubString(String s) {
-
-        String lSubString = "";
-        int length = 0;
-
-        for (int i = 0; i < s.length(); i++) {
-
-            String iSubString = "";
-            for (int j = i + 1; j < s.length(); j++) {
-
-
-            }
-
-            if (length < iSubString.length()) {
-                length = iSubString.length();
-                lSubString = iSubString;
-            }
-        }
-
-        return lSubString;
-    }
-
-    /*
-          Working using a HashSet
-
-    private static int getLongestSubString(String s){
-
-        int j = 0, max =0;
-        HashSet<Character> set = new HashSet<Character>();
-
-        for(int i =0; i < s.length(); i++){
-
-            if(set.contains(s.charAt(i))){
-
-                set.remove()
-
-            }else {
-                set.add(s.charAt(i));
-                max = Math.max(max, set.size());
-            }
-
-        }
-
-        return max;
-
-    } */
-
     private static int longestSubString(String s) {
 
         HashMap<Character, Integer> map = new HashMap<Character, Integer>();

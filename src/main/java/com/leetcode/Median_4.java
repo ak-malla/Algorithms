@@ -24,8 +24,8 @@ public class Median_4 {
 
     public static void main(String a[]) {
 
-        int[] aa = {1, 2};
-        int[] b = {3};
+        int[] aa = {1, 2, 3};
+        int[] b = {4, 5};
         System.out.println(findMedianSortedArrays(aa, b));
     }
 
